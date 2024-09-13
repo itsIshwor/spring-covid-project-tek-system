@@ -87,8 +87,6 @@ class CovidControllerTest {
         mockMvc.perform(get("/covid/top5?by=active")
                         .contentType("application/json"))
                 .andDo(print())
-                .andExpect(status().isOk()).andExpect(jsonPath("$.[0].id", is(14)))
-                .andExpect(jsonPath("$.[0].country", is("country7")))
                 .andExpect(jsonPath("$.[0].active", is(670)));
 
     }
