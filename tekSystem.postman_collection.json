@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "6218d3a1-195c-46e8-94c9-f2a4c38fe47e",
+		"name": "tekSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10559266"
+	},
+	"item": [
+		{
+			"name": "GET BY ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"country\": \"China\",\n    \"active\": 200,\n    \"death\": 3,\n    \"recovered\": 189\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/covid/-9",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"covid",
+						"-9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST BY ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"country\": \"China\",\n    \"active\": 200,\n    \"death\": 3,\n    \"recovered\": 189,\n    \"id\": 8\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/covid",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"covid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "top5By",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/covid/top5?by=other",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"covid",
+						"top5"
+					],
+					"query": [
+						{
+							"key": "by",
+							"value": "other"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "totalBy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/covid/to?by=death",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"covid",
+						"to"
+					],
+					"query": [
+						{
+							"key": "by",
+							"value": "death"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/covid",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"covid"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
