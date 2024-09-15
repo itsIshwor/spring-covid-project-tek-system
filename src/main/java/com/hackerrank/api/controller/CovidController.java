@@ -41,7 +41,7 @@ public class CovidController {
 
     @GetMapping("/total")
     public ResponseEntity<Object> getTotalBy(@RequestParam String by) {
-        return ResponseEntity.ok("total:" + covidService.totalBy(by));
+        return ResponseEntity.ok(covidService.totalBy(by));
     }
 
     @GetMapping("/{id}")
